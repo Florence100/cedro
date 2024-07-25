@@ -27,7 +27,7 @@ function browsersync() {
 
 
 function styles_dev() {
-    return src('./src/styles/style.scss')
+    return src('./src/styles/index.scss')
         .pipe(sourcemaps.init())
         .pipe(scss({
             errorLogToConsole: true,
@@ -43,7 +43,7 @@ function styles_dev() {
 
 
 function styles_build() {
-    return src('./src/styles/style.scss')
+    return src('./src/styles/index.scss')
         .pipe(scss({
             errorLogToConsole: true,
             outputStyle: 'compressed'
@@ -104,7 +104,7 @@ async function clean() {
 
 function watch_dev() {
     watch(['./src/js/script.js', './src/components/**/*.js'], scripts)
-    watch(['./src/styles/style.scss', './src/components/**/*.scss'], styles_dev).on(
+    watch(['./src/styles/**/*.scss', './src/components/**/*.scss'], styles_dev).on(
         'change',
         browserSync.reload
     )
@@ -112,6 +112,7 @@ function watch_dev() {
         'change',
         browserSync.reload
     )
+    
 }
 
 export { browsersync, styles_dev, scripts, pages, copyResources, clean };
