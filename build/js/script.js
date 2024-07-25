@@ -1,1 +1,1 @@
-console.log('footer change!')
+//=include footer.js

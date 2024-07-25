@@ -1,0 +1,66 @@
+.header {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.header__wrapper {
+    width: 76rem;
+    margin: 0 auto;
+    @include flex-row-wide;
+}
+
+.header__content {
+    @include flex-row-wide;
+    gap: 2rem;
+}
+
+.header__phone {
+    @include flex-row-wide;
+    color: $primary-color;
+    font-family: 'Roboto-Medium';
+    cursor: url('../images/cursor.svg') 2 2, default;
+
+    &:hover {
+        color: $text-dark-color;
+
+        .header__phone-img {
+            background-image: url('../images/phone-hover.svg');
+        }
+    }
+
+    .header__phone-img {
+        width: 2rem;
+        height: 2rem;
+        background-image: url('../images/phone.svg');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.header__personal {
+    @include flex-row;
+}
+
+.header__favorite-icon {
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../images/favorite.svg');
+    background-position: center;
+    background-size: cover;
+    cursor: url('../images/cursor.svg') 2 2, default;
+
+    &:hover {
+        background-image: url('../images/favorite-hover.svg');
+    }
+}
+
+.header__account-icon {
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../images/profile.svg');
+    background-position: center;
+    background-size: cover;
+    cursor: url('../images/cursor.svg') 2 2, default;
+}
+

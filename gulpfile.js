@@ -45,10 +45,13 @@ function styles_dev() {
 function styles_build() {
     return src('./src/styles/index.scss')
         .pipe(scss({
-            errorLogToConsole: true,
+            // errorLogToConsole: true,
             outputStyle: 'compressed'
         }))
-        .on('error', console.error.bind(console))
+        .on('error', (err) => {
+            throw err
+        })
+        // .on('error', console.error.bind(console))
         .pipe(autoprefixer({ grid: true }))
         .pipe(rename({suffix: '.min'}))
         .pipe(dest('./build/css/'))
@@ -112,7 +115,8 @@ function watch_dev() {
         'change',
         browserSync.reload
     )
-    
+    watch(['./src/images/**'], copyResources)
+    watch(['./src/fonts/**'], copyResources)
 }
 
 export { browsersync, styles_dev, scripts, pages, copyResources, clean };

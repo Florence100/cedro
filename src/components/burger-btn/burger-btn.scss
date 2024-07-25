@@ -1,0 +1,15 @@
+.burger-btn {
+    width: 2rem;
+    height: 2rem;
+    background-position: center;
+    background-size: cover;
+    cursor: url('../images/cursor.svg') 2 2, default;
+}
+
+.burger-btn_open {
+    background-image: url('../images/burger.svg');
+
+    &:hover {
+        background-image: url('../images/burger-hover.svg');
+    }
+}
