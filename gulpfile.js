@@ -45,13 +45,11 @@ function styles_dev() {
 function styles_build() {
     return src('./src/styles/index.scss')
         .pipe(scss({
-            // errorLogToConsole: true,
             outputStyle: 'compressed'
         }))
         .on('error', (err) => {
             throw err
         })
-        // .on('error', console.error.bind(console))
         .pipe(autoprefixer({ grid: true }))
         .pipe(rename({suffix: '.min'}))
         .pipe(dest('./build/css/'))
@@ -60,13 +58,13 @@ function styles_build() {
 
 function scripts() {
     return src('./src/js/script.js')
-    .pipe(
-        includeFiles({
-            includePaths: './src/components/**/',
-        })
-    )
-    .pipe(dest('./build/js/'))
-    .pipe(browserSync.stream())
+        .pipe(
+            includeFiles({
+                includePaths: './src/components/**/',
+            })
+        )
+        .pipe(dest('./build/js/'))
+        .pipe(browserSync.stream())
 }
 
 
@@ -82,12 +80,6 @@ function pages() {
 }
 
 
-// function copyFonts() {
-//     return src('./src/fonts/**/*')
-//     .pipe(dest('./build/fonts/'))
-// }
-
-
 function copyImages() {
     return src('./src/images/**/*')
     .pipe(dest('./build/images/'))
@@ -95,7 +87,6 @@ function copyImages() {
 
 
 async function copyResources() {
-    // copyFonts()
     copyImages()
 }
 
@@ -116,7 +107,6 @@ function watch_dev() {
         browserSync.reload
     )
     watch(['./src/images/**'], copyResources)
-    // watch(['./src/fonts/**'], copyResources)
 }
 
 export { browsersync, styles_dev, scripts, pages, copyResources, clean };

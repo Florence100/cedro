@@ -6,7 +6,7 @@ $primary-color-active: rgba(208, 188, 122, 0.5);
 $secondary-color: rgb(33, 36, 46);
 
 $text-dark-color: $secondary-color;
-$text-light-color: rgba(33, 36, 46, 0.4);
+$text-light-color: rgba($secondary-color, 0.4);
 $border-color: rgb(235, 235, 235);
 
 // break points:
