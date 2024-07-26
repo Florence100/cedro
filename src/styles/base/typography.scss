@@ -1,20 +1,19 @@
 // Typography Rules
 
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+@mixin roboto-regular {
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
-@font-face {
-    font-family: 'Roboto-Medium';
-    src: url("../fonts/Roboto/Roboto-Medium.ttf");
+@mixin roboto-medium {
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 
-@font-face {
-    font-family: 'Times-New-Roman';
-    src: url('../fonts/Times-New-Roman/timesnewromanpsmt.ttf');
-    font-weight: 400;
+html {
+    font-size: 16px;
+    @include roboto-regular;
 }
+
+
 

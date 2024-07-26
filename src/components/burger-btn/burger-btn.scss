@@ -13,3 +13,11 @@
         background-image: url('../images/burger-hover.svg');
     }
 }
+
+.burger-btn_close {
+    background-image: url('../images/nav_block.svg');
+
+    &:hover {
+        background-image: url('../images/nav_block-hover.svg');
+    }
+}

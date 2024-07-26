@@ -82,10 +82,10 @@ function pages() {
 }
 
 
-function copyFonts() {
-    return src('./src/fonts/**/*')
-    .pipe(dest('./build/fonts/'))
-}
+// function copyFonts() {
+//     return src('./src/fonts/**/*')
+//     .pipe(dest('./build/fonts/'))
+// }
 
 
 function copyImages() {
@@ -95,7 +95,7 @@ function copyImages() {
 
 
 async function copyResources() {
-    copyFonts()
+    // copyFonts()
     copyImages()
 }
 
@@ -116,7 +116,7 @@ function watch_dev() {
         browserSync.reload
     )
     watch(['./src/images/**'], copyResources)
-    watch(['./src/fonts/**'], copyResources)
+    // watch(['./src/fonts/**'], copyResources)
 }
 
 export { browsersync, styles_dev, scripts, pages, copyResources, clean };

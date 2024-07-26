@@ -1,13 +1,13 @@
 .header {
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     border-bottom: 1px solid $border-color;
-}
-
-.header__wrapper {
-    width: 76rem;
-    margin: 0 auto;
+    position: relative;
     @include flex-row-wide;
+
+    @media screen and (max-width: $tablet) {
+        width: 90%;
+    }
 }
 
 .header__content {
@@ -17,8 +17,9 @@
 
 .header__phone {
     @include flex-row-wide;
+    @include roboto-medium;
+    font-size: 0.875rem;
     color: $primary-color;
-    font-family: 'Roboto-Medium';
     cursor: url('../images/cursor.svg') 2 2, default;
 
     &:hover {

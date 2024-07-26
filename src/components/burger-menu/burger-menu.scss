@@ -1,0 +1,33 @@
+.burger-menu {
+    position: absolute;
+    width: 100%;
+    background: $bg-color-basic;
+    top: 0;
+    right: 0;
+    transition: right 0.2s ease;
+    z-index: 50;
+    border: 1px dashed black;
+}
+
+.burger-menu_closed {
+    top: 0;
+    right: -100%;
+}
+
+.burger-menu__top-section {
+    // width: 76rem;
+    // margin: 0 auto;
+    width: 100%;
+    @include flex-row-wide;
+    padding: 1rem 2rem;
+}
+
+.burger-menu__content {
+    width: 70rem;
+    margin: 0 auto;
+    margin-top: 12.75rem;
+    margin-bottom: 16.75rem;
+    @include flex-row-wide;
+
+    border: 1px dashed black;
+}
