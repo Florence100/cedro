@@ -62,16 +62,28 @@
         </div>
         <div class="account__profile">
             <div class="account__profile-title">Профиль</div>
-            <form class="profile-form">
-                <div class="profile-form__title">Данные профиля</div>
-                <label for="name" class="profile-form__label">ФИО</label>
-                <input type="text" name="name" class="input"/>
-                <label for="email" class="profile-form__label">Почта</label>
-                <input type="email" name="email" class="input"/>
-                <label for="tel" class="profile-form__label">Телефон</label>
-                <input type="tel" name="tel" class="input"/>
-                <bytton type="submit">Сохранить изменения</bytton>
-            </form>
+            <div class="account__profile-content">
+                <form class="profile-form">
+                    <div class="profile-form__title">Данные профиля</div>
+                    <div class="profile-form__fields">
+                        <label class="profile-form__label">
+                            ФИО
+                            <input type="text" class="input"/>
+                        </label>
+                        <label class="profile-form__label">
+                            Почта
+                            <input type="email" class="input"/>
+                        </label>
+                        <label for="tel" class="profile-form__label">
+                            Телефон
+                            <input type="tel" name="tel" class="input"/>
+                        </label>
+                    </div>
+                    <div class="profile-form__button-container">
+                        <button class="button" type="submit">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>

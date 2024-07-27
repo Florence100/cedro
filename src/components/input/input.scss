@@ -1,0 +1,17 @@
+.input {
+    width: 34rem;
+    max-width: 100%;
+    background-color: $bg-сolor-minor;
+    height: 3.5rem;
+    padding-left: 1rem;
+    line-height: 1.5;
+
+    &:hover {
+        cursor: url('../images/cursor.svg') 2 2, default;
+    }
+
+    &:focus {
+        border: 1px solid rgba(0, 0, 0, 1);
+        border-radius: 4px;
+    }
+}

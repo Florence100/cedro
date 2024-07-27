@@ -2,7 +2,7 @@
 $bg-color-basic: rgb(255, 255, 255);
 $bg-сolor-minor: rgb(247, 247, 247);
 $primary-color: rgb(208, 188, 122);
-$primary-color-active: rgba(208, 188, 122, 0.5);
+$primary-color-light: rgba($primary-color, 0.5);
 $secondary-color: rgb(33, 36, 46);
 
 $text-dark-color: $secondary-color;

@@ -1,0 +1,20 @@
+.button {
+    width: 14.5rem;
+    height: 3.5rem;
+    border-radius: 4px;
+    background-color: $secondary-color;
+    color: white;
+    font-size: 1rem;
+    font: 500;
+    @include centered;
+    cursor: url('../images/cursor.svg') 2 2, default;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+
+    &:active {
+        background-color: rgba($primary-color, 0.5);
+    }
+}
