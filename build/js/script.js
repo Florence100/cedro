@@ -1,29 +1,25 @@
 const SLIDER_WIDTH = 256;
 const SLIDER_MARGIN = 32;
 const SLIDER_MOBILE_MARGIN = 8;
-let windowWidth = document.documentElement.clientWidth;
+let windowWidth;
 let sliderCount;
 let sliderCenterPadding;
+
 
 function getSliderCount(sliderWidth, sliderMargin) {
     sliderCount =  Math.trunc(windowWidth / (sliderWidth + sliderMargin));
     return sliderCount;
 }
 
+
 function getSliderCenterPadding(cliderCount, sliderMargin) {
     sliderCenterPadding = ( windowWidth - ( cliderCount * SLIDER_WIDTH + ( cliderCount ) * sliderMargin )) / 2;
     return sliderCenterPadding;
 }
 
-if (windowWidth > 766) {
-    getSliderCount(SLIDER_WIDTH, SLIDER_MARGIN);
-    getSliderCenterPadding(sliderCount, SLIDER_MARGIN);
-} else {
-    getSliderCount(SLIDER_WIDTH, SLIDER_MOBILE_MARGIN);
-    getSliderCenterPadding(sliderCount, SLIDER_MOBILE_MARGIN);
-}
 
-window.addEventListener('resize', () => {
+function sliderInit() {
+    let init = $('.slider').data('init-slider');
     windowWidth = document.documentElement.clientWidth;
 
     if (windowWidth > 766) {
@@ -33,22 +29,37 @@ window.addEventListener('resize', () => {
         getSliderCount(SLIDER_WIDTH, SLIDER_MOBILE_MARGIN);
         getSliderCenterPadding(sliderCount, SLIDER_MOBILE_MARGIN);
     }
-})
 
-console.log(sliderCount);
-console.log(sliderCenterPadding);
+    if (!init) {
+        $('.slider').slick({
+            autoplay: true,
+            infinite: true,
+            slidesToShow: sliderCount,
+            slidesToScroll: 3,
+            arrows: false,
+            centerMode: true,
+            swipeToSlide: true,
+            centerPadding: `${sliderCenterPadding}px`,
+        }).data({'init-slider': true});
+    } else {
+        $('.slider').slick('unslick').data({'init-slider': false});
+        $('.slider').slick({
+            autoplay: true,
+            infinite: true,
+            slidesToShow: sliderCount,
+            slidesToScroll: 3,
+            arrows: false,
+            centerMode: true,
+            swipeToSlide: true,
+            centerPadding: `${sliderCenterPadding}px`,
+        }).data({'init-slider': true});
+    }
+}
 
 
-$('.slider').slick({
-    autoplay: true,
-    infinite: true,
-    slidesToShow: sliderCount,
-    slidesToScroll: 3,
-    arrows: false,
-    centerMode: true,
-    swipeToSlide: true,
-    centerPadding: `${sliderCenterPadding}px`,
-});
+sliderInit();
+window.addEventListener('resize', sliderInit);
+window.addEventListener('orientationchange', sliderInit);
 
 
 function addToFavorites() {
