@@ -1,10 +1,13 @@
 @import './base/index.scss';
-
 @import '../components/header/header.scss';
 @import '../components/logo/logo.scss';
-@import '../components/burger-btn/burger-btn.scss';
 @import '../components/burger-menu/burger-menu.scss';
 @import '../components/profile-form/profile-form.scss';
 @import '../components/account/account.scss';
 @import '../components/input/input.scss';
 @import '../components/button/button.scss';
+@import '../components/button/button_burger.scss';
+@import '../components/button/button_close.scss';
+@import '../components/promotion/promotion.scss';
+@import '../components/card/card.scss';
+@import '../components/slider/slider.scss';

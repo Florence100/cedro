@@ -3,17 +3,20 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid $border-color;
     position: relative;
-    // overflow-x: hidden;
     @include flex-row-wide;
 
-    @media screen and (max-width: $tablet) {
-        width: 90%;
+    @media screen and (max-width: 767px) {
+        padding: 1rem 1rem;
     }
 }
 
 .header__content {
     @include flex-row-wide;
     gap: 2rem;
+
+    @media screen and (max-width: 560px) {
+        gap: 0.25rem;
+    }
 }
 
 .header__phone {
@@ -21,6 +24,8 @@
     @include roboto-medium;
     font-size: 0.875rem;
     color: $primary-color;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
     cursor: url('../images/cursor.svg') 2 2, default;
 
     &:hover {
@@ -38,10 +43,21 @@
         background-position: center;
         background-size: cover;
     }
+
+    @media screen and (max-width: 560px) {
+        .header__phone-value {
+            display: none;
+        }
+    }
 }
 
 .header__personal {
     @include flex-row;
+    position: relative;
+
+    @media screen and (max-width: 560px) {
+        margin-right: 0.75rem;
+    }
 }
 
 .header__favorite-icon {
@@ -55,6 +71,22 @@
     &:hover {
         background-image: url('../images/favorite-hover.svg');
     }
+}
+
+.header__favorite-count {
+    min-width: 0.875rem;
+    width: fit-content;
+    height: 0.875rem;
+    border-radius: 100px;
+    background-color: $secondary-color;
+    color: $text-white-color;
+    padding: 0.125rem;
+    position: absolute;
+    top: 0;
+    left: 1.125rem;
+    font-weight: 500;
+    font-size: 0.5rem;
+    @include centered;
 }
 
 .header__account-icon {

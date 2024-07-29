@@ -1,0 +1,9 @@
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+
+.slick-slide {
+    margin: 0 1rem;
+
+    @media screen and (max-width: 767px) {
+        margin: 0 0.5rem;
+    }
+}

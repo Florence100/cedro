@@ -1,15 +1,22 @@
-const burgerCloseBtn = document.querySelector('.burger-btn_close');
-const burgerOpenBtn = document.querySelector('.burger-btn_open');
+const buttonClose = document.querySelector('.button_close');
+const buttonBurger = document.querySelector('.button_burger');
 const burgerMenu = document.querySelector('.burger-menu');
+const links = burgerMenu.querySelectorAll('a');
 
-burgerCloseBtn.addEventListener('click', closeBtnClickHandler);
-burgerOpenBtn.addEventListener('click', openBtnClickHandler);
+buttonClose?.addEventListener('click', burgerMenuClose);
+buttonBurger?.addEventListener('click', burgerMenuOpen);
 
-function closeBtnClickHandler() {
-    burgerMenu.classList.add('burger-menu_closed');
+links?.forEach((link) => {
+    link.addEventListener('click', burgerMenuClose);
+})
+
+function burgerMenuClose() {
+    burgerMenu?.classList.add('burger-menu_closed');
+    document.body.style.overflow = '';
 }
 
-function openBtnClickHandler() {
-    burgerMenu.classList.remove('burger-menu_closed');
+function burgerMenuOpen() {
+    burgerMenu?.classList.remove('burger-menu_closed');
+    document.body.style.overflow = 'hidden';
 }
 

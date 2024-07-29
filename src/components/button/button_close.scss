@@ -1,0 +1,14 @@
+.button_close {
+    width: 2rem;
+    height: 2rem;
+    background-position: center;
+    background-size: cover;
+    cursor: url('../images/cursor.svg') 2 2, default;
+    background-color: $bg-color-basic;
+    background-image: url('../images/nav_block.svg');
+
+    &:hover {
+        background-color: $bg-color-basic;
+        background-image: url('../images/nav_block-hover.svg');
+    }
+}

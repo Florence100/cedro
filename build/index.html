@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
     <link rel="stylesheet" href="css/index.min.css">
 </head>
 <body>
@@ -18,14 +21,16 @@
                 <div class="header__phone-value">8 (800) 555-35-35</div>
             </div>
             <div class="header__personal">
-                <div class="header__favorite-icon"></div>
+                <div class="header__favorite-icon">
+                    <div class="header__favorite-count"></div>
+                </div>
                 <div class="header__account-icon"></div>
             </div>
-            <button class="burger-btn burger-btn_open"></button>
+            <button class="button button_burger"></button>
             <div class="burger-menu burger-menu_closed">
                 <div class="burger-menu__top-section">
                     <div class="logo"></div>
-                    <button class="burger-btn burger-btn_close"></button>
+                    <button class="button button_close"></button>
                 </div>
                 <div class="burger-menu__content">
                     <div class="burger-menu__bar">
@@ -55,7 +60,7 @@
     <div class="account">
         <div class="account__nav">
             <ul class="account__nav-list">
-                <li class="account__nav-item">профиль</li>
+                <li class="account__nav-item account__nav-item_active">профиль</li>
                 <li class="account__nav-item">мои заказы</li>
                 <li class="account__nav-item">выход</li>
             </ul>
@@ -68,15 +73,15 @@
                     <div class="profile-form__fields">
                         <label class="profile-form__label">
                             ФИО
-                            <input type="text" class="input"/>
+                            <input type="text" class="input input_text"/>
                         </label>
                         <label class="profile-form__label">
                             Почта
-                            <input type="email" class="input"/>
+                            <input type="email" class="input input_email"/>
                         </label>
                         <label for="tel" class="profile-form__label">
                             Телефон
-                            <input type="tel" name="tel" class="input"/>
+                            <input type="tel" class="input input_tel"/>
                         </label>
                     </div>
                     <div class="profile-form__button-container">
@@ -86,6 +91,206 @@
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <div class="promotion">
+        <div class="promotion__header">
+            <h3 class="promotion__title"><div class="promotion__title-accent">Тренды</div>сезона</h3>
+            <a class="promotion__link" href="#">Перейти в каталог<div class="promotion__link-img"></div></a>
+        </div>
+        <div class="slider">
+            <div class="card card_1">
+                <div class="card__image">
+                    <div class="card__tag">Sale</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card__image">
+                    <div class="card__tag">Акция! 1+1=3</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_3">
+                <div class="card__image">
+                    <div class="card__tag">Sale</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_4">
+                <div class="card__image">
+                    <div class="card__tag">Бесплатная доставка</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_1">
+                <div class="card__image">
+                    <div class="card__tag">Sale</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card__image">
+                    <div class="card__tag">Акция! 1+1=3</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_3">
+                <div class="card__image">
+                    <div class="card__tag">Sale</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_4">
+                <div class="card__image">
+                    <div class="card__tag">Бесплатная доставка</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_1">
+                <div class="card__image">
+                    <div class="card__tag">Sale</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_2">
+                <div class="card__image">
+                    <div class="card__tag">Акция! 1+1=3</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_3">
+                <div class="card__image">
+                    <div class="card__tag">Sale</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card_4">
+                <div class="card__image">
+                    <div class="card__tag">Бесплатная доставка</div>
+                    <div class="card__favorite"></div>
+                </div>
+                <div class="card__description">
+                    <div class="card__description-title">Brown to Blonde</div>
+                    <div class="card__description-product">Пигмент для бровей</div>
+                    <div class="card__description-volume">12 ml.</div>
+                    <div class="card__description-price">
+                        <div class="card__description-price_new">1 500 ₽</div>
+                        <div class="card__description-price_old">3 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
