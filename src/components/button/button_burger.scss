@@ -1,0 +1,15 @@
+.button_burger {
+    width: 2rem;
+    height: 2rem;
+    background-position: center;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    cursor: url('../images/cursor.svg') 2 2, default;
+    background-image: url('../images/burger.svg');
+    background-color: $bg-color-basic;
+
+    &:hover {
+        background-image: url('../images/burger-hover.svg');
+        background-color: $bg-color-basic;
+    }
+}

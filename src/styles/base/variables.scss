@@ -1,0 +1,24 @@
+// colors:
+$bg-color-basic: rgb(255, 255, 255);
+$bg-сolor-minor: rgb(247, 247, 247);
+$primary-color: rgb(208, 188, 122);
+$primary-color-light: rgba($primary-color, 0.5);
+$secondary-color: rgb(33, 36, 46);
+
+$text-dark-color: $secondary-color;
+$text-light-color: rgba($secondary-color, 0.4);
+$text-white-color: rgb(255, 255, 255);
+
+$border-color: rgb(235, 235, 235);
+$border-dark-color: rgba($secondary-color, 0.4);
+
+$card-decor-color_1: rgba(192, 141, 116, 1);
+$card-decor-color_2: rgba(234, 151, 111, 1);
+$card-decor-color_3: rgba(192, 116, 116, 1);
+
+$tag-color: rgba(235, 87, 87, 1);
+
+// break points:
+$tablet: 1279px;
+$mobal-large: 767px;
+$mobal-medium: 560px;

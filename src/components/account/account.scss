@@ -1,0 +1,90 @@
+.account {
+    width: 100%;
+    @include flex-row;
+    border-bottom: 1px solid $border-color;
+
+    @media screen and (max-width: 767px) {
+        @include flex-col;
+        border-bottom: 0;
+    }
+}
+
+.account__nav {
+    width: 21.25%;
+    border-right: 1px solid $border-color;
+    padding: 7rem 6.25vw;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        border-bottom: 1px solid $border-color;
+        border-right: 0;
+        padding: 0.625rem 1rem;
+    }
+}
+
+.account__nav-list {
+    @include flex-col;
+    gap: 0.75rem;
+
+    @media screen and (max-width: 767px) {
+        @include flex-row;
+        gap: 1rem;
+    }
+}
+
+.account__nav-item {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.04rem;
+    transition: color 0.2s ease;
+    line-height: 1.2;
+    cursor: url('../images/cursor.svg') 2 2, default;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    @media screen and (max-width: 767px) {
+        &:last-child {
+            position: absolute;
+            right: 1.25rem;
+        }
+    }
+}
+
+.account__nav-item_active {
+    color: $primary-color;
+}
+
+.account__profile {
+    @include flex-col;
+    flex-grow: 1;
+}
+
+.account__profile-title {
+    width: 100%;
+    font-size: 5rem;
+    line-height: 5rem;
+    padding-top: 7rem;
+    padding-left: 9.5%;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid $border-color;
+    text-transform: uppercase;
+    cursor: default;
+
+    @media screen and (max-width: 767px) {
+        padding: 2rem 1rem;
+        font-size: 2.1875rem;
+        line-height: 2.5rem;
+        border-bottom: 0;
+    }
+}
+
+.account__profile-content {
+    padding: 5rem 0;
+
+    @media screen and (max-width: 767px) {
+        padding: 0;
+    }
+}

@@ -1,0 +1,11 @@
+.logo {
+    width: 5.75rem;
+    height: 2rem;
+    background-image: url('../images/logo.svg');
+    background-size: cover;
+    cursor: url('../images/cursor.svg') 2 2, default;
+    
+    &:hover {
+        opacity: 72%;
+    }
+}

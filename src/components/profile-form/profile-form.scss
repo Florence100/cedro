@@ -1,0 +1,58 @@
+.profile-form {
+    @include flex-col;
+}
+
+.profile-form__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    padding-left: 9.5%;
+    line-height: 1;
+    cursor: default;
+
+    @media screen and (max-width: 767px) {
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+.profile-form__fields {
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+    padding-bottom: 5rem;
+    @include flex-col;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 767px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+        gap: 1rem;
+    }
+}
+
+.profile-form__label {
+    font-size: 1rem;
+    color: $text-light-color;
+    cursor: url('../images/cursor.svg') 2 2, default;
+    @include flex-col;
+    gap: 0.75rem;
+
+    @media screen and (max-width: 767px) {
+        gap: 0.5rem;
+    }
+}
+
+.profile-form__button-container {
+    width: 100%;
+    border-top: 1px solid $border-color;
+    padding-left: 9.5%;
+    padding-top: 5rem;
+
+    @media screen and (max-width: 767px) {
+        padding: 2rem 1rem;
+    }
+}
+
